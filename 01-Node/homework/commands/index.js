@@ -28,6 +28,7 @@ const ls = (args, print) => {
 
 const cat = (args, print ) => {  //es una funcion para leer archivo
     fs.readFile(args[0], (err, data) => {  //siempre en la posicion 0 va a quedar el nombre del archivo que quiero leer
+        if (err) throw Error (err)  //esto es manejo de error con node
         print(data)
     })
 }
