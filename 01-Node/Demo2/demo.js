@@ -19,3 +19,4 @@ console.log('holaaaa gg')
 //solo npm test y npm star se pueden usar sin el run
 //cuando se instalan paquetes se guardan en la prop dependencia
 //nodemon es un watcher, es para evitar levantar el servidor despues de cada cambio
+//para desisntalar un paquete npm uninstall nombre
