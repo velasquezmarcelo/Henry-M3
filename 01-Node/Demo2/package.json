@@ -1,14 +1,14 @@
 {
   "name": "demo2",
   "version": "1.0.0",
-  "description": "demo node ft-31b",
+  "description": "demo node ft-31c",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tuki": "node demo.js",
     "dev": "nodemon demo.js"
   },
-  "author": "",
+  "author": "El topo pai",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.20"
