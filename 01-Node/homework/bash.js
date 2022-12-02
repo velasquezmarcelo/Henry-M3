@@ -31,14 +31,14 @@ const print = (input) => {
 
 process.stdout.write('prompt > ') 
 
-process.stdin.on('data', (data)=> {  //data es buffer
+process.stdin.on('data', (data)=> {  //data es echo buffer
     let args = data.toString().trim().split(' ');   //.trim elimina los espacios en blanco de los extremos
-    //'echo holis' -> ['echo', 'holi']
-    let cmd = args.shift(); //'echo'
+    //'echo holis' -> ['echo', 'holi'] transforma argumento que es un buffer en string y luego en un array
+    let cmd = args.shift(); //'echo', se queda con el primer indice
     //console.log(args)
 
     //console.log(commands[cmd]())
-    //ternario
+    //ternario, para evitar usar muchos if
     commands[cmd]  //commands es un objeto, cmd es una propiedad una variable, si esto da true pasa a la siguiente linea
     ? commands[cmd](args, print)
     : print('Command invalid ') //los : actuan como el else

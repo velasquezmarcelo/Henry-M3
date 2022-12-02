@@ -1,9 +1,11 @@
-const fs = require('fs');
+//en index se trabajan  todos los comandos
+const fs = require('fs'); //si no lo requerimos no nos va a funcionar las funciones que usen el fs
 const { request } = require('http');
 
 const echo = (args, print) => {
-    print (args.join(' '))  //.join es lo contrario del split
+    print (args.join(' '))  //args es un array y .join es lo contrario del split
 }
+//todas las funciones van a tener args y print porque sino no andan
 
 const pwd = (args, print) => {  //devuelve el directorio donde estamos parados
     //print (process.mainModule.path)  //el objeto process tiene una props path
@@ -35,7 +37,7 @@ const cat = (args, print ) => {  //es una funcion para leer archivo
 
 const head = (args, print) => { //lee la primeras lineas del archivo
     fs.readFile(args[0], 'utf-8', (err, data) => {
-        print(data.split('\n').splice(0, 5).join('\n'))
+        print(data.split('\n').splice(0, 5).join('\n')) //.splice si modifica el array original, se queda con los indice indicados, en cada indice entra una linea de texto.
     })
 }
 
@@ -48,9 +50,10 @@ const tail = (args, print) => {
 const curl = (args, print) => { //instalar npm i --save request
     request(args[0], (err, data) => {
         //console.log(data)
-        print(data.body)
+        print(data.body) 
     })
 }
+//esta funcion lee html
 
 module.exports = {
     echo,
