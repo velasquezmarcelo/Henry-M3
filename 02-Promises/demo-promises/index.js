@@ -20,6 +20,8 @@ axios.get('https://jsonplaceholder.typicode.com/users')
 // fetch.get('https://jsonplaceholder.typicode.com/users')
 //     .then(response => response.json())
 //     .then(data => console.log(data))
+//     .catch(error => console.log(error)) 
+
         
 //Crear promesa con class, creamos nuestras propias promesas
 
